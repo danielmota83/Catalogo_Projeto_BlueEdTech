@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=McLaren&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Orbitron&family=Pangolin&family=Patrick+Hand&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat,Fredoka;
+}
+
+header {
+    background-color: aliceblue;
+    background-size: cover;
+
+    
+    }
+
+.navbar {
+    display: flex;
+    
+    justify-items: flex-end;
+    padding: 1.6rem;
+    background-image: linear-gradient(lightblue,rgb(61, 167, 202));
+
+ }
+
+.imgHeader {
+    width: 100%;
+    display: flex;
+}
+
+.navbar ul.itens {
+    display: flex;
+    list-style: none;
+   margin-right: 2rem;
+    
+}
+
+.li {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 5rem;
+    letter-spacing: 3px;
+    color: rgba(15, 14, 14, 0.5);
+    font-size: 80%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.li:hover{
+    cursor: pointer;
+    color: rgb(244, 248, 21);
+    background-color: rgb(0, 0, 0, 0.02);
+    transform: scale(1.2);
+}
+
+/*div.titulo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+div.titulo h1{
+    max-width: 50%;
+    min-height: 1px;
+    text-align: left;
+    color: rgb(244, 248, 21);
+    font-size: 2.5rem;
+    justify-content: center;
+}
+
+.pokeball{
+    width: 60%;
+}*/
+
+/*.bloco nav{
+    display: flex;
+    background-image: "../img/capa grande.png";
+    background-size: cover;
+    width: 100%;
+    
+}*/
+
+main {
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: aliceblue;
+    padding-top: 5%;
+}
+
+.cartao{
+    padding: .1rem;
+    margin: 0 1.5rem 1.5rem;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(252, 252, 252), rgb(231, 240, 249));
+    box-shadow: .1rem .1rem .1rem .1rem rgb(188, 185, 185);
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 12rem;
+    height: 20rem;
+    border-radius: .3rem;
+}
+
+div.cartao:hover {
+    transform: scale(1.1);
+}
+.cartao img{
+    width: 100%;
+}
+
+.cartaoTopo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.elementos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    margin-top: .5rem;
+}
+#editar {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px #0037ff;
+    color: #0037ff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top: .1rem;
+  }
+  
+#apagar {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px #db1717;
+    color: #db1717;;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+#editar:hover {
+    background-color: #0037ff;
+    color: #fff;
+  }
+  
+#apagar:hover {
+    background-color: #db1717;
+    color: #fff;
+  }
+
+@media (max-width: 1028px) {
+
+    h1 {
+      text-align: center;
+      max-width: 100%;
+      padding-bottom: 10%;
+    }
+  
+      }
+
+      footer {
+        background-image: linear-gradient(lightblue,rgb(61, 167, 202));
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 999;
+      }
+      
+      footer p {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.3rem;
+      }
+
+      section#mensagem {
+        padding: 1.5rem;
+        background-image: linear-gradient(rgb(30, 5, 120), rgb(30, 81, 192));
+        color: #d2dbd3;
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 600;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      span#close {
+        font-size: 2rem;
+        cursor: pointer;
+        transition: .3s;
+      }
+      
+      span#close:hover{
+        color: rgb(255, 0, 0);
+        transform: scale(1.5);
+      }
+  

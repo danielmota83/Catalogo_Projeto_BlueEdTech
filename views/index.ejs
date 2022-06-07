@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Catalogo Lugares</title>
+  </head>
+  <body>
+    <header>
+      <div class="bloco nav">
+        <nav class="navbar">
+          <ul class="itens">
+            <li><a href="../" class="li">HOME</a></li>
+            <li><a href="./cadastro" class="li">CADASTRO</a></li>
+          </ul>
+        </nav>
+         </div>
+      <div>
+        <img src="./img/capa grande.png" class="imgHeader" alt="imagem header">
+      </div>
+      
+    </header>
+    <% if(message != ""){ %>
+      <section id="mensagem">
+        <p><%=message%></p>
+        <span id="close">&times;</span>
+      </section>
+      <% } %>
+    <main>
+      <% lugaresLista.forEach(element => { %>
+      <a href="/detalhes/<%= element.id %> ">
+        <div class="elementos">
+        <div class="cartao">
+          
+          <div class="principal">
+            <img src="<%= element.img %> " alt="<%= element.name %> " />
+            <div class="nome"><%=element.name%></div>
+          </div>
+          <div class="footer"><%=element.pais%></div>
+        </div>
+        <div class="botoes">
+        <a id="editar" href="/atualiza/<%= element.id %>">Editar</a>
+        <a id="apagar" href="/delete/<%= element.id %>">Apagar</a>
+      </div>
+    </div>
+      </a>
+      <% }) %>
+    </main>
+    <footer>
+      <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
+    </footer>
+    <script src="/js/script.js"></script>  
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/cadastro.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div class="bloco nav">
+        <nav class="navbar">
+          <ul class="itens">
+            <li><a href="../" class="li">HOME</a></li>
+            <li><a href="./cadastro" class="li">CADASTRO</a></li>
+          </ul>
+        </nav>
+         </div>
+      <div>
+        <img src="./img/capa grande.png" class="imgHeader" alt="imagem header">
+      </div>
+      
+    </header>
+    <main>
+        <section id="cadastro">
+          <% if (local ==undefined) {%>
+            <h2>CADASTRE MAIS LUGARES QUE TODOS DEVERIAM VISISTAR!</h2>
+    
+            <form id="form" action="/cadastro" method="post">
+                <div>
+                <label for="img">Link da Imagem</label>
+                <input  type="url" name="img" id="img" placeholder="Link da imagem" required/>
+            </div>
+      
+            <div>    
+            <label for="nome">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required/>
+            </div>
+                   
+            <div> 
+                <label for="pais">País</label>
+                <input type="text" name="type" id="type" placeholder="Digite o país desse local" required/>
+            </div>
+      
+                                  
+                <div> 
+                <label for="Informacoes">Informações</label>
+                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required/>
+            </div>
+
+            <div> 
+              <label for="atracoes">Dicas do que fazer</label>
+              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required/>
+          </div>
+                        
+                <div> 
+                <button type="submit">CADASTRAR</button>
+            </div>
+            </form>
+            <% } else {%>
+            <h2>ATUALIZAÇÃO DE CADASTRO</h2>
+    
+            <form id="form" action="/update/<%=LugaresLista.id" method="post">
+                <div>
+                <label for="img">Link da Imagem</label>
+                <input  type="url" name="img" id="img" placeholder="Link da imagem" required/>
+            </div>
+      
+            <div>    
+            <label for="nome">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required/>
+            </div>
+                   
+            <div> 
+                <label for="pais">País</label>
+                <input type="text" name="type" id="type" placeholder="Digite o país desse local" required/>
+            </div>
+      
+                                  
+                <div> 
+                <label for="Informacoes">Informações</label>
+                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required/>
+            </div>
+
+            <div> 
+              <label for="atracoes">Dicas do que fazer</label>
+              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required/>
+          </div>
+                        
+                <div> 
+                <button type="submit">ATUALIZAR</button>
+            </div>
+            </form>
+            <% } %>
+        </section>
+        </main>
+        <footer>      
+          <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
+        </footer>
+  </body>
+</html>
