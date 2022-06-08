@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/cadastro.css" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
     <title>Catalogo Lugares</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
       </div>
       <div>
         <img
-          src="./img/capa grande.png"
+          src="../img/capa grande.png"
           class="imgHeader"
           alt="imagem header"
         />
@@ -93,7 +93,7 @@
         <% } else { %>
         <h2>ATUALIZAÇÃO DE CADASTRO</h2>
 
-        <form id="form" action="/update/<%= lugaresLista.id %>" method="post">
+        <form id="form" action="/update/<%= lugar.id %>" method="post">
           <div>
             <label for="img">Link da Imagem</label>
             <input

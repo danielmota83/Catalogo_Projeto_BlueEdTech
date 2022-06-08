@@ -110,7 +110,7 @@ app.post("/cadastro", (req, res) => {
   const lugar = req.body;
   lugar.id = lugaresLista.length + 1;
   lugaresLista.push(lugar);
-  message = "Novo lugar Cadastrado com SUCESSO!";
+  message = "Lugar Cadastrado com SUCESSO!";
   res.redirect("/");
 });
 
@@ -126,5 +126,6 @@ app.post("/update/:id", (req, res) => {
 app.get("/delete/:id", (req, res) => {
   const id = +req.params.id - 1;
   delete lugaresLista[id];
+  message = "Lugar deletado do catálogo!";
   res.redirect("/#principal");
 });

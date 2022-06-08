@@ -49,34 +49,6 @@ header {
   transform: scale(1.2);
 }
 
-/*div.titulo {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-div.titulo h1{
-    max-width: 50%;
-    min-height: 1px;
-    text-align: left;
-    color: rgb(244, 248, 21);
-    font-size: 2.5rem;
-    justify-content: center;
-}
-
-.pokeball{
-    width: 60%;
-}*/
-
-/*.bloco nav{
-    display: flex;
-    background-image: "../img/capa grande.png";
-    background-size: cover;
-    width: 100%;
-    
-}*/
 
 main {
   display: flex;
