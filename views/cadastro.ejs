@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/cadastro.css" />
-    <title>Pokedex</title>
+    <title>Catalogo Lugares</title>
   </head>
   <body>
     <header>
@@ -24,68 +24,67 @@
     </header>
     <main>
         <section id="cadastro">
-          <% if (local ==undefined) {%>
+          <% if (lugar ==undefined) { %>
             <h2>CADASTRE MAIS LUGARES QUE TODOS DEVERIAM VISISTAR!</h2>
     
             <form id="form" action="/cadastro" method="post">
                 <div>
                 <label for="img">Link da Imagem</label>
-                <input  type="url" name="img" id="img" placeholder="Link da imagem" required/>
+                <input  type="url" name="img" id="img" placeholder="Link da imagem" required>
             </div>
       
             <div>    
             <label for="nome">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required/>
+                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required>
             </div>
                    
             <div> 
                 <label for="pais">País</label>
-                <input type="text" name="type" id="type" placeholder="Digite o país desse local" required/>
+                <input type="text" name="pais" id="pais" placeholder="Digite o país desse local" required>
             </div>
       
                                   
                 <div> 
                 <label for="Informacoes">Informações</label>
-                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required/>
+                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required>
             </div>
 
             <div> 
               <label for="atracoes">Dicas do que fazer</label>
-              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required/>
+              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required>
           </div>
                         
                 <div> 
                 <button type="submit">CADASTRAR</button>
             </div>
             </form>
-            <% } else {%>
+            <% } else { %>
             <h2>ATUALIZAÇÃO DE CADASTRO</h2>
     
-            <form id="form" action="/update/<%=LugaresLista.id" method="post">
+            <form id="form" action="/update/<%= lugaresLista.id %>" method="post">
                 <div>
                 <label for="img">Link da Imagem</label>
-                <input  type="url" name="img" id="img" placeholder="Link da imagem" required/>
+                <input  type="url" name="img" id="img" placeholder="Link da imagem" value="<%= lugar.img %>">
             </div>
       
             <div>    
             <label for="nome">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required/>
+                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" value="<%= lugar.name %>">
             </div>
                    
             <div> 
                 <label for="pais">País</label>
-                <input type="text" name="type" id="type" placeholder="Digite o país desse local" required/>
+                <input type="text" name="pais" id="pais" placeholder="Digite o país desse local" value="<%= lugar.pais %>">
             </div>
-      
-                                  
+                 
                 <div> 
                 <label for="Informacoes">Informações</label>
-                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required/>
+                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" value="<%= lugar.informacoes %>">
             </div>
 
             <div> 
               <label for="atracoes">Dicas do que fazer</label>
-              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required/>
+              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" value="<%= lugar.atracoes %>">
           </div>
                         
                 <div> 
