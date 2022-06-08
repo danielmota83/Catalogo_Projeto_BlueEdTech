@@ -110,8 +110,8 @@ div#botaoHome:hover {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  width: 30rem;
-  height: 35rem;
+  width: 80%;
+
   border-radius: 0.4rem;
   gap: 0.3rem;
 }
@@ -128,20 +128,6 @@ div#botaoHome:hover {
   font-weight: lighter;
 }
 
-#cartaoAtras {
-  padding: 0.5rem;
-  margin: 0 5rem 4rem;
-  align-items: center;
-  color: rgb(8, 8, 8);
-  font-weight: bold;
-  font-style: oblique;
-  font-size: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 40rem;
-}
 
 .principal {
   display: flex;
