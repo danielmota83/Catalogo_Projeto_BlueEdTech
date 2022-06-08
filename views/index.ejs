@@ -16,41 +16,43 @@
             <li><a href="./cadastro" class="li">CADASTRO</a></li>
           </ul>
         </nav>
-         </div>
-      <div>
-        <img src="./img/capa grande.png" class="imgHeader" alt="imagem header">
       </div>
-      
+      <div>
+        <img
+          src="./img/capa grande.png"
+          class="imgHeader"
+          alt="imagem header"
+        />
+      </div>
     </header>
     <% if(message != ""){ %>
-      <section id="mensagem">
-        <p><%=message%></p>
-        <span id="close">&times;</span>
-      </section>
-      <% } %>
+    <section id="mensagem">
+      <p><%=message%></p>
+      <span id="close">&times;</span>
+    </section>
+    <% } %>
     <main>
       <% lugaresLista.forEach(element => { %>
       <a href="/detalhes/<%= element.id %> ">
         <div class="elementos">
-        <div class="cartao">
-          
-          <div class="principal">
-            <img src="<%= element.img %> " alt="<%= element.name %> " />
-            <div class="nome"><%=element.name%></div>
+          <div class="cartao">
+            <div class="principal">
+              <img src="<%= element.img %> " alt="<%= element.name %> " />
+              <div class="nome"><%=element.name%></div>
+            </div>
+            <div class="footer"><%=element.pais%></div>
           </div>
-          <div class="footer"><%=element.pais%></div>
+          <div class="botoes">
+            <a id="editar" href="/atualiza/<%= element.id %>">Editar</a>
+            <a id="apagar" href="/delete/<%= element.id %>">Apagar</a>
+          </div>
         </div>
-        <div class="botoes">
-        <a id="editar" href="/atualiza/<%= element.id %>">Editar</a>
-        <a id="apagar" href="/delete/<%= element.id %>">Apagar</a>
-      </div>
-    </div>
       </a>
       <% }) %>
     </main>
     <footer>
       <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
     </footer>
-    <script src="/js/script.js"></script>  
+    <script src="/js/script.js"></script>
   </body>
 </html>

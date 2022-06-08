@@ -16,86 +16,148 @@
             <li><a href="./cadastro" class="li">CADASTRO</a></li>
           </ul>
         </nav>
-         </div>
-      <div>
-        <img src="./img/capa grande.png" class="imgHeader" alt="imagem header">
       </div>
-      
+      <div>
+        <img
+          src="./img/capa grande.png"
+          class="imgHeader"
+          alt="imagem header"
+        />
+      </div>
     </header>
     <main>
-        <section id="cadastro">
-          <% if (lugar ==undefined) { %>
-            <h2>CADASTRE MAIS LUGARES QUE TODOS DEVERIAM VISISTAR!</h2>
-    
-            <form id="form" action="/cadastro" method="post">
-                <div>
-                <label for="img">Link da Imagem</label>
-                <input  type="url" name="img" id="img" placeholder="Link da imagem" required>
-            </div>
-      
-            <div>    
-            <label for="nome">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" required>
-            </div>
-                   
-            <div> 
-                <label for="pais">País</label>
-                <input type="text" name="pais" id="pais" placeholder="Digite o país desse local" required>
-            </div>
-      
-                                  
-                <div> 
-                <label for="Informacoes">Informações</label>
-                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" required>
-            </div>
+      <section id="cadastro">
+        <% if (lugar ==undefined) { %>
+        <h2>CADASTRE MAIS LUGARES QUE TODOS DEVERIAM VISISTAR!</h2>
 
-            <div> 
-              <label for="atracoes">Dicas do que fazer</label>
-              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" required>
+        <form id="form" action="/cadastro" method="post">
+          <div>
+            <label for="img">Link da Imagem</label>
+            <input
+              type="url"
+              name="img"
+              id="img"
+              placeholder="Link da imagem"
+              required
+            />
           </div>
-                        
-                <div> 
-                <button type="submit">CADASTRAR</button>
-            </div>
-            </form>
-            <% } else { %>
-            <h2>ATUALIZAÇÃO DE CADASTRO</h2>
-    
-            <form id="form" action="/update/<%= lugaresLista.id %>" method="post">
-                <div>
-                <label for="img">Link da Imagem</label>
-                <input  type="url" name="img" id="img" placeholder="Link da imagem" value="<%= lugar.img %>">
-            </div>
-      
-            <div>    
-            <label for="nome">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Digite o nome do Lugar" value="<%= lugar.name %>">
-            </div>
-                   
-            <div> 
-                <label for="pais">País</label>
-                <input type="text" name="pais" id="pais" placeholder="Digite o país desse local" value="<%= lugar.pais %>">
-            </div>
-                 
-                <div> 
-                <label for="Informacoes">Informações</label>
-                <input type="text" name="informacoes" id="informacoes" placeholder="Digite as informacoes mais importantes" value="<%= lugar.informacoes %>">
-            </div>
 
-            <div> 
-              <label for="atracoes">Dicas do que fazer</label>
-              <input type="text" name="atracoes" id="atracoes" placeholder="Digite as dicas do que fazer" value="<%= lugar.atracoes %>">
+          <div>
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Digite o nome do Lugar"
+              required
+            />
           </div>
-                        
-                <div> 
-                <button type="submit">ATUALIZAR</button>
-            </div>
-            </form>
-            <% } %>
-        </section>
-        </main>
-        <footer>      
-          <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
-        </footer>
+
+          <div>
+            <label for="pais">País</label>
+            <input
+              type="text"
+              name="pais"
+              id="pais"
+              placeholder="Digite o país desse local"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="Informacoes">Informações</label>
+            <input
+              type="text"
+              name="informacoes"
+              id="informacoes"
+              placeholder="Digite as informacoes mais importantes"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="atracoes">Dicas do que fazer</label>
+            <input
+              type="text"
+              name="atracoes"
+              id="atracoes"
+              placeholder="Digite as dicas do que fazer"
+              required
+            />
+          </div>
+
+          <div>
+            <button type="submit">CADASTRAR</button>
+          </div>
+        </form>
+        <% } else { %>
+        <h2>ATUALIZAÇÃO DE CADASTRO</h2>
+
+        <form id="form" action="/update/<%= lugaresLista.id %>" method="post">
+          <div>
+            <label for="img">Link da Imagem</label>
+            <input
+              type="url"
+              name="img"
+              id="img"
+              placeholder="Link da imagem"
+              value="<%= lugar.img %>"
+            />
+          </div>
+
+          <div>
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Digite o nome do Lugar"
+              value="<%= lugar.name %>"
+            />
+          </div>
+
+          <div>
+            <label for="pais">País</label>
+            <input
+              type="text"
+              name="pais"
+              id="pais"
+              placeholder="Digite o país desse local"
+              value="<%= lugar.pais %>"
+            />
+          </div>
+
+          <div>
+            <label for="Informacoes">Informações</label>
+            <input
+              type="text"
+              name="informacoes"
+              id="informacoes"
+              placeholder="Digite as informacoes mais importantes"
+              value="<%= lugar.informacoes %>"
+            />
+          </div>
+
+          <div>
+            <label for="atracoes">Dicas do que fazer</label>
+            <input
+              type="text"
+              name="atracoes"
+              id="atracoes"
+              placeholder="Digite as dicas do que fazer"
+              value="<%= lugar.atracoes %>"
+            />
+          </div>
+
+          <div>
+            <button type="submit">ATUALIZAR</button>
+          </div>
+        </form>
+        <% } %>
+      </section>
+    </main>
+    <footer>
+      <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
+    </footer>
   </body>
 </html>

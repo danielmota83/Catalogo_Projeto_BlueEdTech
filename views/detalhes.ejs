@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/details.css">
-        <title>Catalogo Lugares</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/details.css" />
+    <title>Catalogo Lugares</title>
+  </head>
+  <body>
     <% lugarAtual.forEach(element => { %>
-        <header>
-            <div class="bloco nav">
-              <nav class="navbar">
-                <ul class="itens">
-                  <li><a href="../" class="li">HOME</a></li>
-                  <li><a href="./cadastro" class="li">CADASTRO</a></li>
-                </ul>
-              </nav>
-               </div>
-            <div>
-              <img src="../img/capa grande.png" class="imgHeader" alt="imagem header">
-            </div>
-            
-          </header>
+    <header>
+      <div class="bloco nav">
+        <nav class="navbar">
+          <ul class="itens">
+            <li><a href="../" class="li">HOME</a></li>
+            <li><a href="./cadastro" class="li">CADASTRO</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <img
+          src="../img/capa grande.png"
+          class="imgHeader"
+          alt="imagem header"
+        />
+      </div>
+    </header>
     <main>
-        <div id="principal">
-            <div>
-                
-            </div>
-            <div id="cartao">
-                
-                <div class="principal">
-                    <img src="<%= element.img %> " alt="<%= element.name %> ">
-                    <div class="nome"><%=element.name%></div>
-                </div>
-                <div class='pais'><%=element.pais%></div>
-                <div class="info">
-                    <div class="Informacoes"> <%= element.Informacoes %> </div>
-                </div>
-                <div class="atracoes">
-                    <span>O que fazer: <%=element.atracoes %></span>
-
-                </div>
-                
-            </div>
-            <!--<div id="cartaoAtras">
+      <div id="principal">
+        <div></div>
+        <div id="cartao">
+          <div class="principal">
+            <img src="<%= element.img %> " alt="<%= element.name %> " />
+            <div class="nome"><%=element.name%></div>
+          </div>
+          <div class="pais"><%=element.pais%></div>
+          <div class="info">
+            <div class="Informacoes"><%= element.Informacoes %></div>
+          </div>
+          <div class="atracoes">
+            <span>O que fazer: <%=element.atracoes %></span>
+          </div>
+        </div>
+        <!--<div id="cartaoAtras">
                  <div class="principal">
                     <div class="Informacoes"> <%= element.Informacoes %> </div>
                 </div>-->
-                
-        </div>
-        <% }) %>
-        <a href="../"><div id="botaoHome">Volte para a página principal</div></a>
-        
-    </main>  
+      </div>
+      <% }) %>
+      <a href="../"><div id="botaoHome">Volte para a página principal</div></a>
+    </main>
     <footer>
-        <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
-      </footer>  
-</body>
+      <p>Projeto Final - Módulo II BlueEdTech - Todos os direitos reservados</p>
+    </footer>
+  </body>
 </html>
